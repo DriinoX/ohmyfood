@@ -1,0 +1,215 @@
+/****** Géneral ********/
+:root {
+  --main-purple-color: rgb(147,86,220);
+  --main-black-color: rgb(54,53,53);
+  --main-lightgrey1-color: rgb(246,246,246);
+  --main-lightgrey2-color: rgb(234,234,234);
+  --main-lightpurple-color: rgb(247,237,255);
+  --main-primary-color: #9356DC;
+  --main-secondary-color: #FF79DA;
+  --main-tertiary-color: #99E2D0;
+}
+body {
+  margin: 0;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-weight: lighter;
+}
+p {
+  font-weight: lighter;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Roboto', sans-serif;
+}
+p, button {
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/****** Header ********/
+/** Nav **/
+#logo_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-bottom: 2px solid lightgrey;
+  padding-top: 10px;
+}
+#nav_text_localisation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-lightgrey2-color);
+}
+#nav_text_localisation p{
+  margin-left: 10px;
+}
+#div_explorer {
+  text-align: center;
+  background-color: var(--main-lightgrey1-color);
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+#div_explorer h2 {
+  width: 80%;
+  margin: auto;
+}
+#div_explorer h3 {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+.btn-title {
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(226,116,228,1) 0%, rgba(137,40,204,1) 100%);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  box-shadow: 5px 8px 10px -5px rgb(110 110 110);
+  -webkit-box-shadow: 5px 8px 10px -5px rgb(110 110 110);
+  -moz-box-shadow: 5px 8px 10px -5px rgb(110 110 110);
+}
+/** fonctionnement **/
+
+.div_working {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  padding-left: 30px;
+  margin-bottom: 40px;
+}
+.div_working h2{
+  margin-left: -10px;
+}
+.btn-working {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 80px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  box-shadow: 5px 8px 10px -5px rgb(110 110 110 / 30%);
+  -webkit-box-shadow: 5px 8px 10px -5px rgb(110 110 110 / 30%);
+  -moz-box-shadow: 5px 8px 10px -5px rgb(110 110 110 / 30%);
+}
+.btn-working:hover {
+  background-color: var(--main-lightpurple-color);
+}
+.btn-working i:hover {
+  color: var(--main-purple-color);
+}
+.btn-working i {
+  font-size: 12px;
+}
+.btn-working i:last-child {
+  margin-right: 20px;
+}
+.step_number {
+  position: relative;
+  left: -20px;
+  background-color: var(--main-purple-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/****** main ********/
+
+.homepage_restaurant_gallery {
+  background-color: var(--main-lightgrey1-color);
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+.homepage_restaurant_gallery h2{
+  margin-left: 20px;
+}
+.homepage_restaurant_card {
+  width: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 20px;
+  background-color: white;
+  overflow: auto;
+  margin-bottom: 20px;
+  box-shadow: 5px 8px 10px -5px rgb(110 110 110 / 50%);
+  -webkit-box-shadow: 5px 8px 10px -5px rgb(110 110 110 / 50%);
+  -moz-box-shadow: 5px 8px 10px -5px rgb(110 110 110 / 50%);
+
+}
+.homepage_restaurant_card a:last-child {
+  margin-bottom: 0;
+}
+.hompage_img_restaurant {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.homepage_restaurant_subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.homepage_restaurant_subtitle h4{
+  margin: 0;
+}
+.homepage_restaurant_subtitle p{
+  margin: 0;
+}
+
+/****** footer ********/
+
+footer {
+  background-color: var(--main-black-color);
+  padding: 20px;
+  color: white;
+}
+footer img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+footer p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+footer i {
+  margin-right: 10px;
+}
+
+
+/***************************  Menu page ********************************/
+
+#menu_logo_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-bottom: 2px solid lightgrey;
+  padding-top: 10px;
+}
+#menu_logo_title a {
+  position: relative;
+  left: -70px;
+  font-size: 22px;
+}
+
+
+
+
