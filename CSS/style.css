@@ -260,7 +260,7 @@ footer i {
   display: none;
 }
 .purple {
-  background-image: linear-gradient(180deg, var(--main-primary-color) 0%, rgba(226,116,228,1));
+  background-image: linear-gradient(50deg, rgba(226,116,228,1) 0%, var(--main-primary-color));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
