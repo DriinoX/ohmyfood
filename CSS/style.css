@@ -1,3 +1,4 @@
+
 /****** Géneral ********/
 :root {
   --main-purple-color: rgb(147,86,220);
@@ -83,6 +84,9 @@ a {
   -webkit-box-shadow: 5px 8px 10px -5px rgb(110 110 110);
   -moz-box-shadow: 5px 8px 10px -5px rgb(110 110 110);
 }
+.btn-title:hover {
+  transform: scale(0.98);
+}
 /** fonctionnement **/
 
 .div_working {
@@ -100,6 +104,7 @@ a {
   align-items: center;
   margin-bottom: 20px;
   height: 80px;
+  width: 100%;
   border-radius: 25px;
   border: none;
   font-size: 16px;
@@ -109,6 +114,7 @@ a {
 }
 .btn-working:hover {
   background-color: var(--main-lightpurple-color);
+  transform: scale(0.98);
 }
 .btn-working:hover i{
   color: var(--main-purple-color);
@@ -117,7 +123,10 @@ a {
   color: var(--main-purple-color);
 }
 .btn-working i {
-  font-size: 12px;
+  font-size: 18px;
+}
+#fa-mobile-alt {
+  font-size: 24px;
 }
 .btn-working i:last-child {
   margin-right: 20px;
@@ -156,8 +165,11 @@ a {
   box-shadow: 5px 8px 10px -5px rgb(110 110 110 / 50%);
   -webkit-box-shadow: 5px 8px 10px -5px rgb(110 110 110 / 50%);
   -moz-box-shadow: 5px 8px 10px -5px rgb(110 110 110 / 50%);
-
 }
+.homepage_restaurant_card:hover {
+  transform: scale(0.98);
+}
+
 .homepage_restaurant_card a:last-child {
   margin-bottom: 0;
 }
@@ -177,6 +189,26 @@ a {
 }
 .homepage_restaurant_subtitle p{
   margin: 0;
+}
+.new_restaurant {
+  position: relative;
+  top: -240px;
+  display: flex;
+  justify-content: right;
+  padding-right: 10px;
+}
+.new_restaurant p {
+  color: rgb(46,149,120);
+  background-color: var(--main-tertiary-color);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  width: fit-content;
+  border-radius: 3px;
+}
+.no_padding_bottom {
+  padding-bottom: 0;
 }
 
 /****** footer ********/
@@ -218,6 +250,23 @@ footer i {
   height: 260px;
   object-fit: cover;
 }
+
+.heart_div:hover .purple{
+  display: block;
+}
+.heart_div:hover .border{
+  display: none;
+}
+.heart_div .purple{
+  display: none;
+}
+.purple {
+  background-image: linear-gradient(50deg, rgba(226,116,228,1) 0%, var(--main-primary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .main_menu {
   background-color: var(--main-lightgrey2-color);
   padding-top: 20px;
@@ -319,6 +368,14 @@ footer i {
   text-overflow: ellipsis;
   width: 230px;
 }
+#loader {
+  position: absolute;
+  opacity: 1;
+}
+.loader_div {
+  -webkit-animation: loader 5s ease 0.25s both;
+          animation: loader 5s ease 0.25s both;
+}
 
 /************** A modifier **************/
 
@@ -383,6 +440,25 @@ footer i {
 }
 
 
+@keyframes loader {
+  0% {
+    left: 0px;
+    top: 0px;
+    background-color: white;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  100% {
+    display: none;
+  }
+}
+
+
 @-webkit-keyframes slide-left {
   0% {
     -webkit-transform: translateX(100px);
@@ -433,8 +509,140 @@ footer i {
 }
 
 
+/************** Media queries **************/
 
 
+@media screen and (min-width: 550px) and (max-width: 849px){
+  .hompage_img_restaurant {
+    height: 280px;
+  }
+  .new_restaurant {
+    top: -310px;
+  }
+}
+@media screen and (min-width: 850px){
+  .desktop_restaurant_div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .homepage_restaurant_card {
+    width: 270px;
+  }
+  .new_restaurant_card{
+    height: 280px;
+  }
 
+  .btn-working {
+    width: 300px;
+  }
+  .div_working {
+    display: flex;
+    justify-content: center;
+  }
+  .img_menu {
+    height: 400px;
+  }
+  .desktop_menu_div {
+    display: flex;
+    justify-content: center;
+  }
+  .desktop_menu_div > div:nth-child(2) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .desktop_menu_div > div{
+    width: 260px;
+  }
+  .menu_title {
+    text-align: center;
+  }
+  .div_btn_menu {
+    width: 300px;
+    margin: auto;
+  }
+  footer img{
+    width: auto;
+  }
+  footer div {
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu_card p:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
+  }
+  .menu_card:hover p:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
+  }
+  .btn-working {
+    height: 60px;
+  }
+  #div_explorer {
+    padding-bottom: 30px;
+  }
+  .btn-working {
+    width: 250px;
+  }
+  .btn-working i:last-child{
+    margin-right: 10px;
+  }
+  .btn_working_div {
+    display: flex;
+    justify-content: space-around;
+  } 
+}
 
+@media screen and (min-width: 1000px){
+  .menu_card p:first-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 240px;
+  }
+  .menu_card:hover p:first-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 170px;
+  }
+  .desktop_menu_div > div{
+    width: 300px;
+  }
+  .menu_card:hover h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 210px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .menu_card p:first-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 320px;
+  }
+  .menu_card:hover p:first-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 260px;
+  }
+  .desktop_menu_div > div{
+    width: 400px;
+  }
+  .menu_card:hover h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 300px;
+  }
+}
 
