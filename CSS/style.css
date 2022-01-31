@@ -1,3 +1,4 @@
+
 /****** Géneral ********/
 :root {
   --main-purple-color: rgb(147,86,220);
@@ -367,6 +368,14 @@ footer i {
   text-overflow: ellipsis;
   width: 230px;
 }
+#loader {
+  position: absolute;
+  opacity: 1;
+}
+.loader_div {
+  -webkit-animation: loader 5s ease 0.25s both;
+          animation: loader 5s ease 0.25s both;
+}
 
 /************** A modifier **************/
 
@@ -427,6 +436,25 @@ footer i {
   100% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
+  }
+}
+
+
+@keyframes loader {
+  0% {
+    left: 0px;
+    top: 0px;
+    background-color: white;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  100% {
+    display: none;
   }
 }
 
