@@ -83,9 +83,14 @@ a {
   box-shadow: 5px 8px 10px -5px rgb(110 110 110);
   -webkit-box-shadow: 5px 8px 10px -5px rgb(110 110 110);
   -moz-box-shadow: 5px 8px 10px -5px rgb(110 110 110);
+  transition: all 0.5s ease;
 }
 .btn-title:hover {
   transform: scale(0.98);
+  opacity: 0.8;
+  box-shadow: 5px 8px 5px -5px rgb(110 110 110);
+  -webkit-box-shadow: 5px 8px 5px -5px rgb(110 110 110);
+  -moz-box-shadow: 5px 8px 5px -5px rgb(110 110 110);
 }
 /** fonctionnement **/
 
@@ -190,6 +195,12 @@ a {
 .homepage_restaurant_subtitle p{
   margin: 0;
 }
+.menu_card:hover p:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 230px;
+}
 .new_restaurant {
   position: relative;
   top: -240px;
@@ -216,15 +227,24 @@ a {
 footer {
   background-color: var(--main-black-color);
   padding: 20px;
-  color: white;
 }
 footer img {
   width: 120px;
   margin-bottom: 10px;
 }
 footer p{
+  color: white;
+}
+footer p{
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.mailto a{
+  transition: all 0.5s ease;
+  color: white;
+}
+.mailto:hover{
+  transform: scale(1.1);
 }
 footer i {
   margin-right: 10px;
@@ -356,18 +376,12 @@ footer i {
           animation: rotate-center 0.6s ease-in-out both;
 }
 
-.menu_card:hover div:last-child{
+.menu_card:hover > div:last-child{
   display: flex;
   -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
           animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.menu_card:hover p:first-child {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 230px;
-}
 #loader {
   position: absolute;
   opacity: 1;
@@ -486,6 +500,7 @@ footer i {
     visibility: hidden;
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
+    opacity: 0.5;
   }
   100% {
     position: initial;
@@ -499,6 +514,7 @@ footer i {
     visibility: hidden;
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
+    opacity: 0.5;
   }
   100% {
     position: initial;
@@ -531,6 +547,7 @@ footer i {
   }
   .new_restaurant_card{
     height: 280px;
+    overflow: hidden;
   }
 
   .btn-working {
