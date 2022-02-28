@@ -80,12 +80,17 @@ a {
   padding: 20px;
   border-radius: 30px;
   font-size: 16px;
-  box-shadow: 5px 8px 10px -5px rgb(110 110 110);
-  -webkit-box-shadow: 5px 8px 10px -5px rgb(110 110 110);
-  -moz-box-shadow: 5px 8px 10px -5px rgb(110 110 110);
+  transition: all 0.5s ease;
+  box-shadow: 5px 8px 5px -5px rgb(110 110 110);
+  -webkit-box-shadow: 5px 8px 5px -5px rgb(110 110 110);
+  -moz-box-shadow: 5px 8px 5px -5px rgb(110 110 110);
 }
 .btn-title:hover {
   transform: scale(0.98);
+  opacity: 0.8;
+  box-shadow: 5px 8px 10px -5px rgb(110 110 110);
+  -webkit-box-shadow: 5px 8px 10px -5px rgb(110 110 110);
+  -moz-box-shadow: 5px 8px 10px -5px rgb(110 110 110);
 }
 /** fonctionnement **/
 
@@ -190,6 +195,12 @@ a {
 .homepage_restaurant_subtitle p{
   margin: 0;
 }
+.menu_card:hover p:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 230px;
+}
 .new_restaurant {
   position: relative;
   top: -240px;
@@ -216,15 +227,24 @@ a {
 footer {
   background-color: var(--main-black-color);
   padding: 20px;
-  color: white;
 }
 footer img {
   width: 120px;
   margin-bottom: 10px;
 }
 footer p{
+  color: white;
+}
+footer p{
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.mailto a{
+  transition: all 0.5s ease;
+  color: white;
+}
+.mailto:hover{
+  transform: scale(1.1);
 }
 footer i {
   margin-right: 10px;
@@ -260,6 +280,7 @@ footer i {
 .heart_div .purple{
   display: none;
 }
+
 .purple {
   background-image: linear-gradient(50deg, rgba(226,116,228,1) 0%, var(--main-primary-color));
   background-clip: text;
@@ -302,7 +323,6 @@ footer i {
   margin-bottom: 20px;
 }
 .menu_card {
-  background-color: white;
   border-radius: 15px;
   margin-bottom: 15px;
   display: flex;
@@ -356,23 +376,21 @@ footer i {
           animation: rotate-center 0.6s ease-in-out both;
 }
 
-.menu_card:hover div:last-child{
+.menu_card:hover > div:last-child{
   display: flex;
   -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
           animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.menu_card:hover p:first-child {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 230px;
-}
 #loader {
   position: absolute;
   opacity: 1;
 }
 .loader_div {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-animation: loader 5s ease 0.25s both;
           animation: loader 5s ease 0.25s both;
 }
@@ -383,37 +401,81 @@ footer i {
   -webkit-animation: slide-top 0.5s ease 0.25s both;
           animation: slide-top 0.5s ease 0.25s both;
 }
+.slide-top1 > div:first-child{
+  -webkit-animation: display-animation 0.5s ease 0.25s both;
+          animation: display-animation 0.5s ease 0.25s both;
+}
 .slide-top2{
   -webkit-animation: slide-top 0.5s ease 0.5s both;
           animation: slide-top 0.5s ease 0.5s both;
+}
+.slide-top2 > div:first-child{
+  -webkit-animation: display-animation 0.5s ease 0.5s both;
+          animation: display-animation 0.5s ease 0.5s both;
 }
 .slide-top3{
   -webkit-animation: slide-top 0.5s ease 0.75s both;
           animation: slide-top 0.5s ease 0.75s both;
 }
+.slide-top3 > div:first-child{
+  -webkit-animation: display-animation 0.5s ease 0.75s both;
+          animation: display-animation 0.5s ease 0.75s both;
+}
 .slide-top4{
   -webkit-animation: slide-top 0.5s ease 1s both;
           animation: slide-top 0.5s ease 1s both;
+}
+.slide-top4 > div:first-child{
+  -webkit-animation: display-animation 0.5s ease 1s both;
+          animation: display-animation 0.5s ease 1s both;
 }
 .slide-top5{
   -webkit-animation: slide-top 0.5s ease 1.25s both;
           animation: slide-top 0.5s ease 1.25s both;
 }
+.slide-top5 > div:first-child{
+  -webkit-animation: display-animation 0.5s ease 1.25s both;
+          animation: display-animation 0.5s ease 1.25s both;
+}
 .slide-top6{
   -webkit-animation: slide-top 0.5s ease 1.5s both;
           animation: slide-top 0.5s ease 1.5s both;
+}
+.slide-top6 > div:first-child{
+  -webkit-animation: display-animation 0.5s ease 1.5s both;
+          animation: display-animation 0.5s ease 1.5s both;
 }
 .slide-top7{
   -webkit-animation: slide-top 0.5s ease 1.75s both;
           animation: slide-top 0.5s ease 1.75s both;
 }
+.slide-top7 > div:first-child{
+  -webkit-animation: display-animation 0.5s ease 1.75s both;
+          animation: display-animation 0.5s ease 1.75s both;
+}
 .slide-top8{
   -webkit-animation: slide-top 0.5s ease 2s both;
           animation: slide-top 0.5s ease 2s both;
 }
+.slide-top8 > div:first-child{
+  -webkit-animation: display-animation 0.5s ease 2s both;
+          animation: display-animation 0.5s ease 2s both;
+}
 .slide-top9{
   -webkit-animation: slide-top 0.5s ease 2.25s both;
           animation: slide-top 0.5s ease 2.25s both;
+}
+.slide-top9 > div:first-child{
+  -webkit-animation: display-animation 0.5s ease 2.25s both;
+          animation: display-animation 0.5s ease 2.25s both;
+}
+.slide-top10{
+  -webkit-animation: slide-top 0.5s ease 2.5s both;
+          animation: slide-top 0.5s ease 2.5s both;
+}
+.slide-top10 > div:first-child{
+  -webkit-animation: display-animation 0.5s ease 2.5s both;
+          animation: display-animation 0.5s ease 2.5s both;
 }
 
 /**************/
@@ -446,7 +508,7 @@ footer i {
     top: 0px;
     background-color: white;
     opacity: 0.5;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     display: flex;
@@ -486,6 +548,7 @@ footer i {
     visibility: hidden;
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
+    opacity: 0.5;
   }
   100% {
     position: initial;
@@ -499,12 +562,48 @@ footer i {
     visibility: hidden;
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
+    opacity: 0.5;
   }
   100% {
     position: initial;
     -webkit-transform: translateY(0);
             transform: translateY(0);
     visibility: visibility;
+  }
+}
+
+@-webkit-keyframes display-animation {
+  0% {
+    visibility: hidden;
+    opacity: 0.1;
+    background-color: transparent;
+  }
+  50% {
+    visibility: hidden;
+    opacity: 0.5;
+  }
+  100% {
+    position: initial;
+    visibility: visibility;
+    opacity: 1;
+    background-color: white;
+  }
+}
+@keyframes display-animation {
+  0% {
+    visibility: hidden;
+    opacity: 0.1;
+    background-color: transparent;
+  }
+  50% {
+    visibility: hidden;
+    opacity: 0.5;
+  }
+  100% {
+    position: initial;
+    visibility: visibility;
+    opacity: 1;
+    background-color: white;
   }
 }
 
@@ -531,6 +630,7 @@ footer i {
   }
   .new_restaurant_card{
     height: 280px;
+    overflow: hidden;
   }
 
   .btn-working {
