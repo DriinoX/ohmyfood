@@ -201,6 +201,9 @@ a {
   text-overflow: ellipsis;
   width: 230px;
 }
+.menu_card p:first-child {
+  transition: all 0.5s ease;
+}
 .new_restaurant {
   position: relative;
   top: -240px;
@@ -271,13 +274,32 @@ footer i {
   object-fit: cover;
 }
 
-.heart_div:hover .purple{
+/*.heart_div:hover .purple{
   display: block;
 }
 .heart_div:hover .border{
   display: none;
 }
 .heart_div .purple{
+  display: none;
+}*/
+
+.heart_div {
+  position:  relative;
+  margin-right: 20px;
+}
+.heart_div .purple{
+  position: absolute;
+  display: none;
+}
+.heart_div .border{
+  position: absolute;
+  display: block;
+}
+.heart_div:hover .purple{
+  display: block;
+}
+.heart_div:hover .border{
   display: none;
 }
 
@@ -327,6 +349,7 @@ footer i {
   margin-bottom: 15px;
   display: flex;
   overflow: hidden;
+  background-color: white;
   justify-content: space-between;
   align-items: center;
   box-shadow: 5px 8px 10px -5px rgb(110 110 110 / 50%);
@@ -378,8 +401,8 @@ footer i {
 
 .menu_card:hover > div:last-child{
   display: flex;
-  -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-          animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-left 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: slide-left 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 #loader {
@@ -576,7 +599,7 @@ footer i {
   0% {
     visibility: hidden;
     opacity: 0.1;
-    background-color: transparent;
+    background-color: transparent !important;
   }
   50% {
     visibility: hidden;
@@ -593,7 +616,7 @@ footer i {
   0% {
     visibility: hidden;
     opacity: 0.1;
-    background-color: transparent;
+    background-color: transparent !important;
   }
   50% {
     visibility: hidden;
@@ -619,7 +642,8 @@ footer i {
     top: -310px;
   }
 }
-@media screen and (min-width: 850px){
+/** 850 **/
+@media screen and (min-width: 1024px){
   .desktop_restaurant_div {
     display: flex;
     justify-content: center;
@@ -698,7 +722,7 @@ footer i {
   } 
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1024px){
   .menu_card p:first-child {
     white-space: nowrap;
     overflow: hidden;
