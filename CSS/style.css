@@ -288,19 +288,22 @@ footer i {
   position:  relative;
   margin-right: 20px;
 }
-.heart_div .purple{
-  position: absolute;
-  display: none;
-}
 .heart_div .border{
   position: absolute;
   display: block;
 }
-.heart_div:hover .purple{
-  display: block;
+.heart_div .purple{
+  position: absolute;
+  display: none;
+  opacity: 0;
+  transition: all 1s;
 }
 .heart_div:hover .border{
   display: none;
+}
+.heart_div:hover .purple{
+  display: block;
+  opacity: 1;
 }
 
 .purple {
