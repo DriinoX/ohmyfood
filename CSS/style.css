@@ -274,33 +274,20 @@ footer i {
   object-fit: cover;
 }
 
-/*.heart_div:hover .purple{
-  display: block;
-}
-.heart_div:hover .border{
-  display: none;
-}
-.heart_div .purple{
-  display: none;
-}*/
-
 .heart_div {
   position:  relative;
   margin-right: 20px;
 }
-.heart_div .purple{
-  position: absolute;
-  display: none;
-}
 .heart_div .border{
   position: absolute;
-  display: block;
+}
+.heart_div .purple{
+  position: absolute;
+  opacity: 0;
+  transition: all 0.7s;
 }
 .heart_div:hover .purple{
-  display: block;
-}
-.heart_div:hover .border{
-  display: none;
+  opacity: 1;
 }
 
 .purple {
