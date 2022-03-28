@@ -565,7 +565,7 @@ footer i {
     position: initial;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    visibility: visibility;
+    visibility: visible;
   }
 }
 @keyframes slide-top {
@@ -579,7 +579,7 @@ footer i {
     position: initial;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    visibility: visibility;
+    visibility: visible;
   }
 }
 
