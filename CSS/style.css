@@ -274,35 +274,19 @@ footer i {
   object-fit: cover;
 }
 
-/*.heart_div:hover .purple{
-  display: block;
-}
-.heart_div:hover .border{
-  display: none;
-}
-.heart_div .purple{
-  display: none;
-}*/
-
 .heart_div {
   position:  relative;
   margin-right: 20px;
 }
 .heart_div .border{
   position: absolute;
-  display: block;
 }
 .heart_div .purple{
   position: absolute;
-  display: none;
   opacity: 0;
-  transition: all 1s;
-}
-.heart_div:hover .border{
-  display: none;
+  transition: all 0.7s;
 }
 .heart_div:hover .purple{
-  display: block;
   opacity: 1;
 }
 
@@ -504,6 +488,7 @@ footer i {
           animation: display-animation 0.5s ease 2.5s both;
 }
 
+
 /**************/
 
 @-webkit-keyframes rotate-center {
@@ -580,7 +565,7 @@ footer i {
     position: initial;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    visibility: visibility;
+    visibility: visible;
   }
 }
 @keyframes slide-top {
@@ -594,7 +579,7 @@ footer i {
     position: initial;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    visibility: visibility;
+    visibility: visible;
   }
 }
 
