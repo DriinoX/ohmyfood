@@ -488,6 +488,7 @@ footer i {
           animation: display-animation 0.5s ease 2.5s both;
 }
 
+
 /**************/
 
 @-webkit-keyframes rotate-center {
@@ -564,7 +565,7 @@ footer i {
     position: initial;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    visibility: visibility;
+    visibility: visible;
   }
 }
 @keyframes slide-top {
@@ -578,7 +579,7 @@ footer i {
     position: initial;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    visibility: visibility;
+    visibility: visible;
   }
 }
 
