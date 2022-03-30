@@ -595,7 +595,7 @@ footer i {
   }
   100% {
     position: initial;
-    visibility: visibility;
+    visibility: visible;
     opacity: 1;
     background-color: white;
   }
@@ -612,7 +612,7 @@ footer i {
   }
   100% {
     position: initial;
-    visibility: visibility;
+    visibility: visible;
     opacity: 1;
     background-color: white;
   }
